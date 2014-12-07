@@ -19,6 +19,9 @@ npm test
 
 ```js
 var seconds = require('seconds');
+
+seconds('minute');
+//=> 60
 ```
 
 ## Contributing
