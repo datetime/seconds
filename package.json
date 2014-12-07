@@ -1,7 +1,7 @@
 {
   "name": "seconds",
   "description": "Get the number of seconds for a minute, hour, day and week.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/seconds",
   "author": {
     "name": "Jon Schlinkert",
@@ -30,5 +30,21 @@
     "moment": "^2.8.4",
     "should": "*"
   },
-  "keywords": []
+  "keywords": [
+    "am",
+    "clock",
+    "day",
+    "hour",
+    "hours",
+    "sec",
+    "second",
+    "seconds",
+    "hr",
+    "meridiem",
+    "min",
+    "minutes",
+    "pm",
+    "time",
+    "times"
+  ]
 }
