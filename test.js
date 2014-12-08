@@ -26,7 +26,7 @@ describe('seconds()', function() {
     seconds('week').should.equal(moment.duration(1, 'week').asSeconds());
   });
 
-  it('should get the seconds since today`s midnight.', function() {
+  it('should get the seconds for the current day, since midnight.', function() {
     var todaySeconds = seconds('today');
     var now = new Date;
     var since = ((now.getTime() - now.setHours(0,0,0,0)) / 1000) | 0;
