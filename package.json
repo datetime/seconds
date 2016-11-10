@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "moment": "^2.8.4",
+    "moment": "^2.16.0",
     "should": "*"
   },
   "keywords": [
