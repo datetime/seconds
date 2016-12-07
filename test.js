@@ -5,25 +5,26 @@
  * Licensed under the MIT license.
  */
 
-var should = require('should');
+require('mocha');
+var assert = require('assert');
 var moment = require('moment');
 var seconds = require('./');
 
 describe('seconds()', function() {
   it('should get the seconds for a minute.', function() {
-    seconds('minute').should.equal(moment.duration(1, 'minute').asSeconds());
+    assert.equal(seconds('minute'), moment.duration(1, 'minute').asSeconds());
   });
 
   it('should get the seconds for an hour.', function() {
-    seconds('hour').should.equal(moment.duration(1, 'hour').asSeconds());
+    assert.equal(seconds('hour'), moment.duration(1, 'hour').asSeconds());
   });
 
   it('should get the seconds for a day.', function() {
-    seconds('day').should.equal(moment.duration(1, 'day').asSeconds());
+    assert.equal(seconds('day'), moment.duration(1, 'day').asSeconds());
   });
 
   it('should get the seconds for a week.', function() {
-    seconds('week').should.equal(moment.duration(1, 'week').asSeconds());
+    assert.equal(seconds('week'), moment.duration(1, 'week').asSeconds());
   });
 
   it('should get the seconds for the current day, since midnight.', function() {
@@ -31,6 +32,6 @@ describe('seconds()', function() {
     var now = new Date;
     var since = ((now.getTime() - now.setHours(0,0,0,0)) / 1000) | 0;
 
-    since.should.equal(todaySeconds);
+    assert.equal(since, todaySeconds);
   });
 });
