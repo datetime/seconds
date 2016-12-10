@@ -22,7 +22,7 @@
   "devDependencies": {
     "mocha": "*",
     "moment": "^2.8.4",
-    "should": "*"
+    "should": ">=11.1.2"
   },
   "keywords": [
     "am",
