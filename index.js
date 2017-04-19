@@ -11,7 +11,7 @@ var SECONDS_DAY = 864e5; // 1 * 60 * 60 * 24
 
 module.exports = function(timespan) {
   return (({
-    // year  : year(),  // todo
+    year  : year(),
     month  : month(),
     today  : today(),
     week   : 6048e5, // 1 * 60 * 60 * 24 * 7,
@@ -31,4 +31,9 @@ function month() {
   var todaySeconds = today();
   var secondsMonth = (new Date().getDate() - 1) * SECONDS_DAY;
   return todaySeconds + secondsMonth;
+}
+
+function year() {
+  var now = new Date;
+  return now.getTime() - now.setMonth(0, 0);
 }
