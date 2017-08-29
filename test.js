@@ -27,6 +27,20 @@ describe('seconds()', function() {
     assert.equal(seconds('week'), moment.duration(1, 'week').asSeconds());
   });
 
+  it('should get the seconds since beginning of the month.', function() {
+    var actual = seconds('month');
+    var expected = ((new Date().getDate() - 1) * seconds('day')) + seconds('today');
+
+    assert.equal(actual, expected);
+  });
+
+  it('should get the seconds since beginning of the year.', function() {
+    var actual = seconds('year');
+    var now = new Date;
+    var expected = ((now.getTime() - now.setMonth(0,0)) / 1000) | 0;
+    assert.equal(actual, expected);
+  })
+
   it('should get the seconds for the current day, since midnight.', function() {
     var todaySeconds = seconds('today');
     var now = new Date;
